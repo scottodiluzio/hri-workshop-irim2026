@@ -144,3 +144,49 @@ footer a { color:#dbe6ff; }
   .logo-card { min-height:95px; padding:14px; }
   .irim-badge img { width:78px; }
 }
+
+/* v3: dark workshop agenda */
+.program-dark {
+  position: relative;
+  overflow: hidden;
+  color: white;
+  background:
+    radial-gradient(circle at 82% 18%, rgba(62,199,217,.20), transparent 32%),
+    linear-gradient(135deg,#07142f 0%, #0e2c72 58%, #123f92 100%);
+}
+.program-grid {
+  position: absolute;
+  inset: 0;
+  opacity: .10;
+  background-image:
+    linear-gradient(rgba(255,255,255,.22) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.22) 1px, transparent 1px);
+  background-size: 48px 48px;
+  mask-image: linear-gradient(to bottom, black, transparent 92%);
+}
+.program-content { position: relative; }
+.program-heading { display:grid; grid-template-columns:1.1fr .9fr; gap:64px; align-items:end; margin-bottom:20px; }
+.program-heading h2 { margin-bottom:0; }
+.program-heading p { margin:0 0 8px; color:#cddbf4; font-size:16px; max-width:560px; }
+.timeline-dark { max-width:none; border-top:1px solid rgba(255,255,255,.16); }
+.timeline-dark .timeline-item {
+  grid-template-columns:110px 1fr;
+  border-bottom:1px solid rgba(255,255,255,.14);
+  padding:28px 0;
+}
+.timeline-dark .timeline-item .time { color:#72d9e5; font-family:"Space Grotesk"; font-size:18px; }
+.timeline-dark .timeline-item h3 { color:white; margin-bottom:7px; }
+.timeline-dark .timeline-item p { color:#d9e4f8; max-width:800px; }
+.timeline-dark .timeline-item small { color:#9fb5d9; }
+.timeline-dark .featured-talk { background:rgba(255,255,255,.045); margin:0 -24px; padding-left:24px; padding-right:24px; border-radius:14px; }
+.timeline-dark .closing-item h3 { color:#8fe5ee; }
+.program-total { margin-top:26px; display:inline-flex; align-items:center; gap:16px; padding:12px 18px; border-radius:999px; border:1px solid rgba(255,255,255,.18); background:rgba(255,255,255,.07); }
+.program-total span { color:#b9cbea; font-size:13px; }
+.program-total strong { font-family:"Space Grotesk"; }
+@media (max-width:900px) {
+  .program-heading { grid-template-columns:1fr; gap:12px; }
+}
+@media (max-width:620px) {
+  .timeline-dark .timeline-item { grid-template-columns:72px 1fr; gap:16px; }
+  .timeline-dark .featured-talk { margin:0 -10px; padding-left:10px; padding-right:10px; }
+}
